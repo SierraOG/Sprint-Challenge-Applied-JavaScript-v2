@@ -33,6 +33,7 @@ function createCarousel(imageSrcs){
   const carouselDiv = document.createElement('div');
   const leftBtn = document.createElement('div');
   const image = [];
+  // images are created, appended, and set with classes in this foreach
   imageSrcs.forEach((imagesrc, i) => {
     image[i] = document.createElement('img');
     image[i].src = imagesrc;

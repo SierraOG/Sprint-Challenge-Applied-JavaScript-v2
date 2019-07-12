@@ -43,7 +43,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
                 // for each object in the array, add the article to the page
                 articleObjectsTopic.forEach(articleObject =>{
                     console.log(articleObject)
-                    let articleElement = createCard(articleObject)
+                    let articleElement = createCard(articleObject, topic)
                     cardsContainer.appendChild(articleElement)
                 })
             })
@@ -55,7 +55,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 
 
 // card creating function
-function createCard(articleObject){
+function createCard(articleObject, topic){
     // create new elements 
     const cardDiv = document.createElement('div');
     const headline = document.createElement('div');
@@ -81,6 +81,9 @@ function createCard(articleObject){
     author.appendChild(imgDiv);
     imgDiv.appendChild(img);
     author.appendChild(authorSpan);
+
+    // add data attribute
+    cardDiv.setAttribute('data-tab', topic);
 
     // return component
     return cardDiv;
