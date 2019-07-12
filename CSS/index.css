@@ -54,6 +54,7 @@ body {
   position: fixed;
   height: 44px;
   background-color: #333;
+  z-index: 5;
 }
 .top-bar .container {
   width: 100%;
@@ -326,40 +327,5 @@ body {
   }
   to {
     opacity: 1;
-  }
-}
-.slide {
-  animation: slide 24s ease infinite;
-}
-@keyframes slide {
-  0% {
-    transform: translateX(0%);
-  }
-  12.5% {
-    transform: translateX(0%);
-  }
-  25% {
-    transform: translateX(-25%);
-  }
-  37.5% {
-    transform: translateX(-25%);
-  }
-  50% {
-    transform: translateX(-50%);
-  }
-  62.5% {
-    transform: translateX(-50%);
-  }
-  75% {
-    transform: translateX(-75%);
-  }
-  87.5% {
-    transform: translateX(-75%);
-  }
-  99% {
-    transform: translateX(-75%);
-  }
-  100% {
-    transform: translateX(0);
   }
 }
