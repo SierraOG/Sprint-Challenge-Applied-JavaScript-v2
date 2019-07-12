@@ -17,6 +17,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/topics')
     console.log(data)
     // make array of topics 
     const topicsArray = data.data.topics
+
     // making a new tab for each topic sin topics array and appending it to tabsElement
     topicsArray.forEach(topic => {
     let element = createTab(topic)
